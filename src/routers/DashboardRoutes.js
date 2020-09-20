@@ -9,14 +9,16 @@ import { HeroScreen } from '../components/heroes/HeroScreen'
 export const DashboardRoutes = () => {
     return (
         <>
-          <div>
+          <div >
             <Navbar />
-            <Switch>
-                <Route exact path="/marvel" component={MarvelScreen} />
-                <Route exact path="/heroe/:heroeId" component={HeroScreen} />
-                <Route exact path="/dc" component={DCScreen} />
-                <Redirect to="/marvel"  />
-            </Switch>                 
+            <div className="container mt-5">
+              <Switch>
+                  <Route exact path="/marvel" component={MarvelScreen} />
+                  <Route exact path="/hero/:heroeId" component={HeroScreen} />
+                  <Route exact path="/dc" component={DCScreen} />
+                  <Redirect to="/marvel"  />
+              </Switch>                 
+            </div>
           </div>
 
         </>
